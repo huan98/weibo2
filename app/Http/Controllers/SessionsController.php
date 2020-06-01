@@ -34,7 +34,7 @@ class SessionsController extends Controller
             } else {
                 Auth::logout();
                 session()->flash('warning', '你的账号未激活，请检查邮箱中的注册邮件进行激活。');
-                reutn redirect('/');
+                return redirect('/');
             }
         } else {
             session()->flash('danger', '很抱歉，您的邮箱和密码不匹配');
